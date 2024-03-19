@@ -5,19 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro de Eventos Culturest</title>
     <link rel="stylesheet" href="assets/style/styles.css">
+    <script src="assets/js/script.js"></script>
   </head>
 
   <body>
+    
     <div class="titulo">
       <img class="logos" src="assets/img/Escudo_Unison.png" alt="Logo UNISON" />
       <h1>Registro de Eventos Culturest</h1>
       <img class="logos" src="assets/img/LOGO_CULTUREST.png" alt="Logo CULTUREST" />
     </div>
+
     <div id="fecha"></div>
+
     <div class="conferencia">
       <h2>Eventos</h2>
       <h3>Conferencia sobre conferencias</h3>
     </div>
+
     <div class="expediente">
         <h5>Lea el expediente del alumno</h5>
         <form action="expediente.php" method="post">
@@ -25,30 +30,6 @@
             <input type="submit" value="Buscar">
         </form>
     </div>
-
-    <script>
-      setInterval(() => {
-        let fecha = new Date();
-        let dia = fecha.getDate();
-        let mes = fecha.getMonth() + 1;
-        let anio = fecha.getFullYear();
-        let hora = fecha.getHours();
-        let minutos = fecha.getMinutes();
-        let segundos = fecha.getSeconds();
-        document.getElementById("fecha").innerHTML =
-          hora +
-          ":" +
-          minutos +
-          ":" +
-          segundos +
-          "-" +
-          dia +
-          "/" +
-          mes +
-          "/" +
-          anio;
-      }, 1000);
-    </script>
     
   </body>
 </html>
