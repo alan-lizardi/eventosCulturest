@@ -1,6 +1,7 @@
 .logos {
     width: 100px;
     height: 100px;
+    margin-right: 10px;
   }
   .titulo {
     display: flex;
@@ -29,3 +30,9 @@
     margin: 0;
     margin-bottom: 5px;
   }
+
+  body{
+    font-family: "Asap Condensed", sans-serif;
+    font-weight: 400;
+  }
+  
