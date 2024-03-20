@@ -1,11 +1,11 @@
 function fecha() {
     let fecha = new Date();
-    let dia = fecha.getDate();
-    let mes = fecha.getMonth() + 1;
+    let dia = fecha.getDate().toString().padStart(2, '0');
+    let mes = (fecha.getMonth() + 1).toString().padStart(2, '0');
     let anio = fecha.getFullYear();
-    let hora = fecha.getHours();
-    let minutos = fecha.getMinutes();
-    let segundos = fecha.getSeconds();
+    let hora = fecha.getHours().toString().padStart(2, '0');
+    let minutos = fecha.getMinutes().toString().padStart(2, '0');
+    let segundos = fecha.getSeconds().toString().padStart(2, '0');
     document.getElementById("fecha").innerHTML =
       hora +
       ":" +
@@ -23,7 +23,7 @@ function fecha() {
       minutos +
       ":" +
       segundos +
-      "-" +
+      " - " +
       dia +
       "/" +
       mes +
@@ -48,7 +48,7 @@ setInterval(function() {
           if (alumnos[i][0] === expediente) {
             const fechaActual = fecha();
             document.getElementById("salida").innerHTML = (alumnos[i][1]);
-            document.getElementById("evento").innerHTML= ("Se ha inscrito al evento Hackathon 2025 - "+fechaActual);
+            document.getElementById("evento").innerHTML= ("Se ha inscrito al evento Hackathon 2025 - "+ fechaActual);
             document.getElementById("expediente").value = "";
           }
         }
